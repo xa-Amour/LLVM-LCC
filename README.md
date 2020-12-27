@@ -21,3 +21,10 @@ Global variable check and bare thread detection are now completed in this demo a
 * LLVM (Low Level Virtual Machine)
 * clang
 * libclang
+
+## Usage
+   Two Patterns:
+    1. [Dependency arguments to parse code from syspath]:
+            python ./llvm_customized_check.py --source=source_folder --target=target_folder
+    2. [Dependency arguments to parse code from compile commands json]:
+            python ./llvm_customized_check.py --source=source_folder --compile_db=compile_commands.json --target=target_folder
