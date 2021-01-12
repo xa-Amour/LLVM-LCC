@@ -7,7 +7,7 @@ LLVM Customized Check is a set of custom detection collections of C/C++ source c
 2. bare thread detection
 3. memory leak check
 4. deadlock detection
-5. moduleS separation
+5. modules separation
 
 Global variable check and bare thread detection are now completed in this demo and not involve any business logic. Deadlock detection demo as https://github.com/xa-Amour/DLD. Bare thread detection detects the following five types of threads:
 1. std::thread
