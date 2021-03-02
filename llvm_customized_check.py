@@ -184,13 +184,13 @@ def detect_global_var(anls, node, scope, indent):
             line = linecache.getline(anls, node.location.line)
             if text in line and 'const' not in line and 'void' not in line:
                 if '(' not in line:
-                    update_gv_to_report(anls, indent, unit, text, 'CASE_1',
+                    update_gv_to_report(anls, indent, unit, text, 'CASE_1-1',
                                         node.location.line, node.location.column)
                     if if_analyse(anls, CUSTOMIZED_CHECK['ignore_file']):
                         update_gv_detct_rule(text, anls, node.location.line)
                         GLOBAL_VAR_COUNT += 1
                 elif '(' in line and '=' in line:
-                    update_gv_to_report(anls, indent, unit, text, 'CASE_1',
+                    update_gv_to_report(anls, indent, unit, text, 'CASE_1-2',
                                         node.location.line, node.location.column)
                     if if_analyse(anls, CUSTOMIZED_CHECK['ignore_file']):
                         update_gv_detct_rule(text, anls, node.location.line)
@@ -200,13 +200,13 @@ def detect_global_var(anls, node, scope, indent):
             line = linecache.getline(anls, node.location.line)
             if text in line and 'const' not in line and 'void' not in line:
                 if '(' not in line:
-                    update_gv_to_report(anls, indent, unit, text, 'CASE_2',
+                    update_gv_to_report(anls, indent, unit, text, 'CASE_2-1',
                                         node.location.line, node.location.column)
                     if if_analyse(anls, CUSTOMIZED_CHECK['ignore_file']):
                         update_gv_detct_rule(text, anls, node.location.line)
                         GLOBAL_VAR_COUNT += 1
                 elif '(' in line and '=' in line:
-                    update_gv_to_report(anls, indent, unit, text, 'CASE_2',
+                    update_gv_to_report(anls, indent, unit, text, 'CASE_2-2',
                                         node.location.line, node.location.column)
                     if if_analyse(anls, CUSTOMIZED_CHECK['ignore_file']):
                         update_gv_detct_rule(text, anls, node.location.line)
